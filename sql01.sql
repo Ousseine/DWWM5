@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS table2 (
 ) ENGINE=MyISAM;
 
 -- moteurs de stockage disponibles
--- SHOW ENGINES;
+SHOW ENGINES;
 
 -- Bases de données
 -- SHOW DATABASES;

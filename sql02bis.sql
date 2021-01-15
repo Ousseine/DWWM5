@@ -1,0 +1,7 @@
+USE test2;
+
+CREATE TABLE IF NOT EXISTS tabled (id INT);
+
+USE dwwm5;
+
+CREATE TABLE IF NOT EXISTS tablee (id INT);

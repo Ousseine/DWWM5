@@ -42,7 +42,19 @@ USE dwwm5;
 
 INSERT INTO mouvements ( id_client, valeur_credit, valeur_debit, date_mvt ) VALUES ( 1, 0, 100, '2021-01-15');
 UPDATE clients SET solde = 800 WHERE id=1;
+
+-- Panne de courant !!!
+
 -- Créditer le compte de Jean
 
 INSERT INTO mouvements ( id_client, valeur_credit, valeur_debit, date_mvt ) VALUES ( 2, 100, 0, '2021-01-15');
 UPDATE clients SET solde = 1000 WHERE id=2;
+
+-- Transactions : 
+
+-- Début de Transaction
+
+--     MAJ table1 - innoDB - annulé
+--     MAJ table2 - myISAM - ne peut pas annuler
+
+--     Erreur
