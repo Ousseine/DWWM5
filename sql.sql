@@ -1,0 +1,2 @@
+USE td1;
+SHOW TABLES;
