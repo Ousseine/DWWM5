@@ -70,23 +70,4 @@ CREATE TABLE IF NOT EXISTS ecrire (
     PRIMARY KEY (id_auteur, id_piece)
 ); 
 
-
-
-
-
-
-
-
-
-
-/* 3 - Peupleument : ajout des données */
-
-
-
-/* acteur = (id_acteur INT, nom VARCHAR(50), prenom VARCHAR(50), adresse VARCHAR(255), date_naissance DATE);
-organisateur = (id_organisateur INT, nom VARCHAR(50), prenom VARCHAR(50), nationalite CHAR(2));
-auteur = (id_auteur INT, nom VARCHAR(50), prenom VARCHAR(50), date_naissance DATE);
-piece = (id_piece INT, titre VARCHAR(50), duree INT, date_creation DATE);
-representation = (id_representation INT, description VARCHAR(128), date_representation DATE, nb_spectateurs INT, #id_organisateur, #id_piece);
-participe = (#id_acteur, #id_representation, role VARCHAR(50));
-ecrire = (#id_auteur, #id_piece, principal LOGICAL); */
+/* 3 - Peuplement : ajout des données */
