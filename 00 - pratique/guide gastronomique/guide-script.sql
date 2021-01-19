@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS guide;
 CREATE DATABASE IF NOT EXISTS guide;
 USE guide;
 
-/* SET storage_engine = MyISAM; */
+SET storage_engine = MyISAM;
 
 CREATE TABLE restaurant(
    id               INT AUTO_INCREMENT,
