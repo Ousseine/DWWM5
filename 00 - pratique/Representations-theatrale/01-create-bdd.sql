@@ -57,6 +57,7 @@ CREATE TABLE IF NOT EXISTS representation (
 
 /* Clé composée */
 CREATE TABLE IF NOT EXISTS participe (
+    id                  INT
     id_acteur           INT, 
     id_representation   INT, 
     role                VARCHAR(50),
