@@ -1,0 +1,5 @@
+etudiant = (id_etudiant INT, nom VARCHAR(50), prenom VARCHAR(50), adresse VARCHAR(128), numero_carte INT);
+ouvrage = (id_ouvrage INT, code VARCHAR(50), titre VARCHAR(50), nb_total INT);
+auteur = (id_auteur INT, nom VARCHAR(50), prenom VARCHAR(50), nationalite VARCHAR(50));
+ecrire = (#id_ouvrage, #id_auteur);
+emprunter = (#id_etudiant, #id_ouvrage, date_pret DATE, date_retour DATE);
