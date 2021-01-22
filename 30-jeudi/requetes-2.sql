@@ -96,13 +96,65 @@ USE revisions;
     -- Recherche la valeur % dans la colonne
     -- SELECT * FROM employe where nom_marital LIKE '%\%%';
 
-    INSERT INTO table1 (colonne5) VALUES ('Rue de l\'église');
+    -- INSERT INTO table1 (colonne5) VALUES ('Rue de l\'église');
     -- INSERT INTO table1 (colonne5) VALUES ('Rue de l\'église');
     -- INSERT INTO table1 (colonne5) VALUES ("Rue de l'église");
 
-    
+    /* SELECT * FROM employe WHERE salaire LIKE '1%'; */
+
+    /* SELECT * FROM employe WHERE 
+        salaire >= 1500 AND salaire <= 2000;  */
+
+    /* SELECT * FROM employe WHERE salaire BETWEEN 1500 AND 2000; */
+    /* SELECT * FROM employe WHERE nom BETWEEN 'c' AND 'e'; */
+
+    /* SELECT * FROM employe WHERE id_entreprise=1 OR id_entreprise=2; 
+
+    SELECT * FROM employe WHERE id_entreprise IN (1,2); */
+
+    /* Requêtes imbriquées */
+
+    /* Sous-requête : requête exécutée à l'intérieur d'une requête */
+
+    /* Dans le FROM */
+
+    /* SELECT * FROM (SELECT * FROM table1 ) AS requete; */
+
+    /* SELECT MIN(salaire), MAX(salaire) FROM (SELECT * FROM employe WHERE id_entreprise=1) AS requete; */
+    /* SELECT MIN(salaire), MAX(salaire) FROM employe WHERE id_entreprise=1; */
+
+    /* SELECT t1.id AS id1, t1.nom AS nom1, t2.nom AS nom2 , t2.id AS id2 
+    FROM 
+        employe AS t1, 
+        entreprise AS t2
+    WHERE t2.id = t1.id_entreprise; */
+
+    /* SELECT * FROM entreprise WHERE ca >= 100 ORDER BY nom; */
+
+    /* INSERT INTO entreprise2 ( nom, ca ) (SELECT nom, ca FROM entreprise WHERE ca >= 100 ORDER BY nom); */
+
+    /* WHERE */
 
 
-    
+    /* SELECT id FROM entreprise WHERE ca =50; */
+    /* SELECT id FROM entreprise WHERE ca > 100; */
+
+    /* SELECT * FROM employe WHERE id_entreprise = (SELECT id FROM entreprise WHERE ca =50); */
+    /* SELECT * FROM employe WHERE id_entreprise IN ( SELECT id FROM entreprise WHERE ca > 100 ); */
+    /* SELECT * FROM employe WHERE id_entreprise NOT IN ( SELECT id FROM entreprise WHERE ca > 100 ); */
+
+    /* SELECT COUNT(*) FROM employe WHERE id_entreprise=?; */
+
+    /* SELECT entreprise.id, nom, (SELECT COUNT(*) FROM employe WHERE id_entreprise=entreprise.id) FROM entreprise; */
+
+    /* (entreprise) id=4
+
+                    (employe) id_entreprise = 4
 
 
+    1, Leclerc, 3
+    2, Carrefour, 2
+    3, Lidl, 2
+    4, Auchan, 1 */
+
+    /* SELECT entreprise.id, nom, (SELECT AVG(salaire) FROM employe WHERE id_entreprise=entreprise.id) FROM entreprise; */
