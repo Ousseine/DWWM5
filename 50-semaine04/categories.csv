@@ -1,0 +1,20 @@
+
+Id  Nom             id_parent
+
+1   Sport           NULL
+2   FOOT            1
+5   L1              2
+6   L2              2
+3   SKI             1
+4   GOLF            1
+7   Politique       NULL
+8   International   7
+9   National        7
+
+
+SELECT * FROM categories WHERE id_parent IS NULL;
+
+SELF JOIN
+
+SELECT * FROM categorie AS c1
+LEFT JOIN categorie AS c2 ON 

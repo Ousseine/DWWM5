@@ -1,0 +1,148 @@
+1 - Identification des acteurs
+
+
+> Un acteur est une unité active stimulée par des flux qu’elle traite et qu’elle renvoie éventuellement à un autre acteur 
+
+- Visiteur
+- Abonné
+- Contributeur
+- Administrateur
+
+
+2 - Identification des échanges ou flux
+
+
+- Les visiteurs, les abonnés et les contributeurs consultent les contenus publics
+- Les abonnés consultent les contenus privés
+
+- les visiteurs et les abonnés déposent des commentaires 
+
+- les visiteurs demandent le statut d'abonné
+- les visiteurs et les abonnés demandent le statut de contributeur
+- les contributeurs demandent le statut d'abonné
+
+- les abonnés peuvent faire une demande d'ami
+
+- les contributeurs peuvent proposer des articles
+
+- les administrateurs gèrent les commentaires
+- les administrateurs gèrent les demandes (abonné, contributeur)
+- les administrateurs gèrent les contenus
+- les administrateurs gèrent les utilisateurs
+- les administrateurs gèrent les catégories
+
+
+3 - Liste des rubriques 
+
+# Contenus
+
+- Titre page
+- Texte page
+- Statut Page
+
+- Titre article
+- Texte article
+- date publication article
+- auteur article
+- catégorie(s) article
+- Statut article
+- Visibilité article
+
+- Titre produit
+- Texte produit
+- Prix produit
+- Image produit
+- Statut produit
+
+- Titre prestation
+- Texte prestation
+- Prix prestation
+- Complément prestation
+- Statut prestation
+
+# Commentaires
+
+- Titre commentaire
+- Texte commentaire
+- Date commentaire
+- Auteur commentaire
+- Statut commentaire
+
+# Utilisateurs 
+
+- Rôle(s) utilisateur
+- Nom 
+
+4 - Dictionnaire des données ( liste des rubriques en tenant compte des champs calculés )
+
+5 - Entités :
+
+    - Page
+    - Article
+    - Produit
+    - Prestation
+    - Commentaire
+    - Utilisateur
+
+6 - Statuts
+
+    Page, article, produit, prestation :
+    - brouillon,
+    - attente,
+    - publié,
+    - (planifié),
+    - corbeille
+
+    Commentaire :
+    - deposé (attente),
+    - validé (publié),
+    - refusé (corbeille),
+
+7 - Organisation
+
+    Commentaires :
+    1 - Ratachés à 1 article
+    2 - Peuvent être imbriqués    
+
+8 - Attribution des rubriques 
+(E) : entité
+(M) : metadata
+
+- (E)Titre page
+- (E)Texte page
+- (E)Statut Page
+
+- (E)Titre article
+- (E)Texte article
+- (M)date publication article
+- (M)auteur article
+- catégorie(s) article
+- (E)Statut article
+- Visibilité article
+
+- (E)Titre produit
+- (E)Texte produit
+- (M)Prix produit
+- (M)Image produit
+- (E)Statut produit
+- catégorie(s) produit
+
+- (E)Titre prestation
+- (E)Texte prestation
+- (M)Prix prestation
+- (M)Complément prestation
+- (E)Statut prestation
+- catégorie(s) prestation
+
+# Commentaires
+
+- Titre commentaire
+- Texte commentaire
+- Date commentaire
+- Auteur commentaire
+- Statut commentaire
+
+# Utilisateurs 
+
+- Rôle(s) utilisateur
+- Nom 
