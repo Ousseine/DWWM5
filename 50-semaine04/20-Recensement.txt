@@ -107,6 +107,7 @@
 8 - Attribution des rubriques 
 (E) : entité
 (M) : metadata
+(R) : relation
 
 - (E)Titre page
 - (E)Texte page
@@ -116,33 +117,45 @@
 - (E)Texte article
 - (M)date publication article
 - (M)auteur article
-- catégorie(s) article
+- (R)catégorie(s) article
 - (E)Statut article
-- Visibilité article
+- (M)Visibilité article
 
 - (E)Titre produit
 - (E)Texte produit
 - (M)Prix produit
 - (M)Image produit
 - (E)Statut produit
-- catégorie(s) produit
+- (R)catégorie(s) produit
 
 - (E)Titre prestation
 - (E)Texte prestation
 - (M)Prix prestation
 - (M)Complément prestation
 - (E)Statut prestation
-- catégorie(s) prestation
+- (R)catégorie(s) prestation
 
 # Commentaires
 
-- Titre commentaire
-- Texte commentaire
-- Date commentaire
-- Auteur commentaire
-- Statut commentaire
+- (E)Titre commentaire
+- (E)Texte commentaire
+- Date commentaire -> automatique
+- (E)Auteur commentaire (pseudo)
+- (E)Statut commentaire
 
 # Utilisateurs 
 
-- Rôle(s) utilisateur
-- Nom 
+- (R)Rôle(s) utilisateur
+- (E)Nom 
+
+
+# Cardinalités
+
+
+                Obligatoire     Facultatif
+Unique              1,1             0,1
+Multiple            1,n             0,n
+
+Multiple - Multiple =>  Table de liaison/relation avec clés étrangère (clés primaires des 2 tables en relation )
+
+Unique - Multiple => clé étrangère crée du côté de l'unique ( clé primaire qui vient du multiple)
